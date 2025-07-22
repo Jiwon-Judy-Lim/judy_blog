@@ -1,0 +1,9 @@
+---
+title: "judy_blog"
+author: "jiwon lim"
+date: "2025-07-22"
+catagories: [introduction]
+image: https://m.health.chosun.com/site/data/img_dir/2025/04/08/2025040803041_0.jpg
+---
+
+Jiwon(Judy)의 첫 블로그:)
