@@ -1,0 +1,12 @@
+---
+title: "Welcome To My Blog"
+author: "Jiwon Lim"
+date: "2025-07-22"
+categories: [introduction]
+---
+
+안녕하세요. 
+저는 임지원입니다. 
+
+앞으로 잘 부탁드려요:)
+편하게 이름부르세요~~ ㅎㅎ

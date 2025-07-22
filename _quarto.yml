@@ -1,0 +1,22 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "judy_blog"
+  navbar:
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/Jiwon-Judy-Lim
+      - icon: twitter
+        href: https://twitter.com
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+
+
+

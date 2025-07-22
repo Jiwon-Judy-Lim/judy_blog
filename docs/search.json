@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "안녕하세요. 저는 임지원입니다.\n앞으로 잘 부탁드려요:) 편하게 이름부르세요~~ ㅎㅎ"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "judy_blog",
+    "section": "",
+    "text": "Hello, Friends! Guten Tag!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\njudy_blog\n\n\n\n\n\n\n\n\nJul 22, 2025\n\n\njiwon lim\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nJul 22, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nQmd기본\n\n\n\n\n\n\n\n\nJul 22, 2025\n\n\njiwon lim\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nintroduction\n\n\n\n\n\n\n\n\n\nJul 22, 2025\n\n\nJiwon Lim\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "안녕하세요 Jiwon_judy_Lim의 블로그:)"
+  },
+  {
+    "objectID": "posts/Qmd기본/index.html",
+    "href": "posts/Qmd기본/index.html",
+    "title": "Qmd기본",
+    "section": "",
+    "text": "import pandas as pd import numpy as np\n\n실습 문제(자전거 시스템의 대여기록)\ndf = pd.read_csv(‘./data/bike_data.csv’) df.head()\ndf = df.astype({‘datetime’ : ‘datetime64[ns]’, ‘weather’ : ‘int64’, ‘season’ : ‘object’, ‘workingday’ : ‘object’, ‘holiday’ : ‘object’}) df.head()\n#1 계절(season) == 1일 때, 가장 대여량이 많은 시간대(hour)을 구하시오. filtered_spring = df[df[“season”] == 1] filtered_spring[‘hour’] = df[‘datetime’].dt.hour df\nhourly_counts = filtered_spring.groupby(‘hour’)[‘count’].max()\nmax_hour = hourly_counts.idxmax() max_hour\nmax_count = hourly_counts.max() int(max_count)\nprint(f”count가 가장 큰 hour는 {max_hour}이며, 대여량은 {int(max_count)}입니다.”)\n#2 각 계절(season)별 평균 대여량(count)을 구하시오. ##도움없이 내가 풀었다!! 오예!!! df.groupby(“season”)[“count”].mean()\n#3 특정 달 동안의 총 대여량을 구하시오. month = df[“datetime”].dt.month df[“month”] = month df df.columns df.head()\ndf.groupby(month)[“count”].sum() january_rentals = df[df[“month”] == 1][“count”].sum() january_rentals\nprint(f”1월 동안의 총 대여량은 {january_rentals}입니다.”)\n#4 가장 대여량이 많은 날짜를 구하시오. date = df[“datetime”].dt.date df.groupby(date)[“count”].sum()\nmax_counts = df.groupby(date)[“count”].sum().sort_values(ascending=False) max_counts\nmax_date = max_counts.idxmax() max_date\nmax_count = max_counts.max() max_count\nprint(f”가장 대여량이 많은 날짜는 {max_date}이며, 대여량은 {max_count}입니다.”)\n#5 시간대(hour)별 평균 대여량(count)을 구하시오. (#### 지피티 없이 내가 혼자 품!!!!!) df[“hour”] = df[“datetime”].dt.hour df.groupby(“hour”)[“count”].mean()\n#6 특정 요일(weekday) 동안의 총 대여량(count)을 구하시오. day = df[“datetime”].dt.day_name() day all_count = df.groupby(day)[“count”].sum() df2 = pd.DataFrame(all_count.sort_values()) df2 all_count.sort_values()\nprint(f”월요일 동안의 총 대여량은 {df2.iloc[0,0]}입니다.”)\n#7 주어진 Bike Sharing 데이터를 사용하여 넓은 형식(wide format)에서 # 긴 형식(long format)으로 변환하시오. # casual과 registered 열을 하나의 열로 변환하고, # 각 기록의 대여 유형과 대여 수를 포함하는 긴 형식 데이터프레임을 # 만드시오.\nhelp(pd.melt)\ndf_melted = pd.melt(df, value_vars=[“casual”, “registered”], value_name=“user_count”, var_name=“user_type”, id_vars=[“datetime”, “season”]) df_melted.head()"
+  }
+]
