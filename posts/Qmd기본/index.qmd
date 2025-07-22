@@ -1,0 +1,7 @@
+---
+title: "Qmd기본"
+author: "jiwon lim"
+date: "2025-07-22"
+catagories: [news]
+image: https://tecoble.techcourse.co.kr/static/348a6c1ea3a4fa8b6990e3e3bf4e8490/20435/sample2.png
+---
