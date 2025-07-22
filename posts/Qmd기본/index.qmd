@@ -94,3 +94,4 @@ df_melted = pd.melt(df, value_vars=["casual", "registered"],
                     value_name="user_count", var_name="user_type", 
                     id_vars=["datetime", "season"])
 df_melted.head()
+```
