@@ -1,6 +1,9 @@
 project:
   type: website
+<<<<<<< HEAD
   output-dir: docs
+=======
+>>>>>>> c73b4206d765969f1c6dd7a4ed4979a1c27724c2
 
 website:
   title: "judy_blog"
