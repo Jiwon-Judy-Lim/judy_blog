@@ -94,14 +94,3 @@ df_melted = pd.melt(df, value_vars=["casual", "registered"],
                     value_name="user_count", var_name="user_type", 
                     id_vars=["datetime", "season"])
 df_melted.head()
-<<<<<<< HEAD
-=======
-
-#8 이전에 생성한 긴 형식 데이터프레임을 활용하여 
-# 각 계절(season)별로 casual과 registered 사용자의 
-# 평균 대여 수(count)를 구하시오.
-
-df_melted.groupby(["season","user_type"])["user_count"].mean()
-
-```
->>>>>>> c73b4206d765969f1c6dd7a4ed4979a1c27724c2
